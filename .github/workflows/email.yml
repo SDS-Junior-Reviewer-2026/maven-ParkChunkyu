@@ -21,5 +21,5 @@ jobs:
         run: |
           aws ses send-email \
             --from "mincoding@naver.com" \
-            --destination "ToAddresses=${{ vars.EMAIL_TO_ADDRESS }} \
+            --destination "ToAddresses=${{ vars.EMAIL_TO_ADDRESS }}" \
             --message "Subject={Data=${{ vars.EMAIL_TITLE }}}, Body={Text={Data=${{ vars.EMAIL_BODY }}}}"
